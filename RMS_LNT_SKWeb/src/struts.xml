@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<include file="struts-default.xml"/>
+	<package name="default" extends="struts-default">
+	<interceptors>
+		<interceptor name="sessionCheck" class="com.lnt.lnd.interceptors.SessionCheck"></interceptor>
+		<interceptor-stack name="newstack">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="sessionCheck"></interceptor-ref>
+		</interceptor-stack>
+	</interceptors>
+	<default-action-ref name="somedefault"></default-action-ref>
+	
+			<action name="login" class="com.lnt.lnd.action.LoginAction">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/loginSuccess.jsp</result>
+				<result name="changePassword">/changePassword.jsp</result>
+				<result name="ERROR">/index.jsp</result>
+				<result name="input">/index.jsp</result>
+			</action>
+			
+			<action name="logout" class="com.lnt.lnd.action.LogoutAction">
+				<!-- <interceptor-ref name="newstack"/> -->
+				<result name="SUCCESS">/index.jsp</result>
+				<result name="ERROR">/index.jsp</result>
+								
+			</action>
+			
+			<action name="changePassword" class="com.lnt.lnd.action.ChangePasswordAction">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/loginSuccess.jsp</result>
+				<result name="ERROR">/index.jsp</result>
+								
+			</action>
+			<action name="preCreateRoom" class="com.lnt.lnd.action.GetFacilities">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/create_room.jsp</result>
+											
+			</action>
+			<action name="createRoom" class="com.lnt.lnd.action.Room" method="createRoom">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/default.jsp</result>
+						
+			</action>
+			
+			<action name="editRoom" class="com.lnt.lnd.action.Room" method="editRoom">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/edit_room.jsp</result>
+						
+			</action>
+			<action name="updateRoom" class="com.lnt.lnd.action.Room" method="updateRoom">
+				<interceptor-ref name="newstack"></interceptor-ref>
+				<result name="SUCCESS">/RMM/default.jsp</result>
+						
+			</action>
+			
+			<action name="deleteRoom" class="com.lnt.lnd.action.Room" method="editRoom">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/delete_room.jsp</result>
+						
+			</action>
+				<action name="deleteRoomRemote" class="com.lnt.lnd.action.Room" method="deleteRoom">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/default.jsp</result>
+						
+			</action>
+			
+			<action name="getAllRooms" class="com.lnt.lnd.action.getAllRooms">
+				<interceptor-ref name="newstack"/>
+				<result name="SUCCESS">/RMM/default.jsp</result>
+						
+			</action>
+	
+			<action name="ListingAction" class="com.lnt.lnd.action.UserManagement" method="populate">
+			<result name="ERROR">/UMM/create_user.jsp</result>
+		</action>
+			<action name="user" class="com.lnt.lnd.action.UserManagement">
+				<result name="SUCCESS">/UMM/default.jsp</result>
+				<result name="ERROR">/UMM/create_user.jsp</result>
+					<result name="EDITERROR">/UMM/edit_user.jsp</result>			
+					<result name="EDITSUCCESS">/UMM/default.jsp</result>
+					<result name="SEARCHERROR">/UMM/default.jsp</result>			
+					<result name="SEARCHSUCCESS">/UMM/edit_user.jsp</result>
+					<result name="DELETESUCCESS">/UMM/default.jsp</result>
+					<result name="ERROR">/UMM/delete_user</result>
+					
+			</action>
+			<action name="DetailAction" class="com.lnt.lnd.action.DetailAction">
+				<result name="SUCCESS">/UMM/details.jsp</result>
+								
+			</action>
+			<action name="deleteuser" class="com.lnt.lnd.action.UserManagement" method="delete">
+				<result name="SEARCHSUCCESS">/UMM/delete_user.jsp</result>
+				<result name="SEARCHERROR">/UMM/delete_user.jsp</result>
+								
+			</action>
+			<action name="blockuser" class="com.lnt.lnd.action.UserManagement" method="block">
+				<result name="SEARCHSUCCESS">/UMM/block_user.jsp</result>
+				<result name="SEARCHERROR">/UMM/block_user.jsp</result>
+									<result name="SUCCESS">/block_user.jsp</result>
+			</action>
+			<action name="unblockuser" class="com.lnt.lnd.action.UserManagement" method="unblock">
+				<result name="SEARCHSUCCESS">/UMM/unblock_user.jsp</result>
+				<result name="SEARCHERROR">/UMM/unblock_user.jsp</result>
+				<result name="SUCCESS">/UMM/unblock_user.jsp</result>
+			</action>
+			
+		<action name="BookingListingAction" class="com.lnt.lnd.action.ListingAction">
+		<result name="SUCCESS">/BMM/single_day_booking_search.jsp</result>
+		
+		</action>	
+		
+		<action name="CheckingAction" class="com.lnt.lnd.action.BookingAction" method="checkAvailability">
+			<result name="SUCCESS">/BMM/details_availability.jsp</result>
+		</action>	
+		
+		<action name="ProceedAction" class="com.lnt.lnd.action.BookingAction" method="proceed">
+			<result name="SUCCESS">/BMM/single_day_booking1.jsp</result>
+		</action>
+		
+		<action name="BookRoom" class="com.lnt.lnd.action.BookingAction" method="bookRoom">
+			<result name="SUCCESS">/BMM/default.jsp</result>
+		</action>
+		
+		<action name="getAllTentaiveBookings" class="com.lnt.lnd.action.BookingAction" method="getAllTentaiveBookings">
+			<result name="SUCCESS">/BMM/default.jsp</result>
+		</action>
+		<action name="approveBooking" class="com.lnt.lnd.action.BookingAction" method="approveBooking">
+			<result name="SUCCESS">/BMM/default.jsp</result>
+		</action>
+		<action name="cancelBooking" class="com.lnt.lnd.action.BookingAction" method="cancelBooking">
+			<result name="SUCCESS">/BMM/default.jsp</result>
+		</action>	
+		
+			<!-- reports -->
+		<action name="BookedHistoryAction" class="com.lnt.lnd.action.BookedHistoryAction" method="execute">
+				<result name="test-stream" type="stream">
+				<param name="inputName">fileStream</param>
+	 			<param name="contentType">application/pdf</param>	</result>			
+			</action>	
+	</package>
+	
+	
+	
+</struts>	
+ 

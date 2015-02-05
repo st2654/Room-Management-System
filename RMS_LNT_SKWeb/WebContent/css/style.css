@@ -1,0 +1,196 @@
+@CHARSET "ISO-8859-1";
+
+body
+	{
+		font-family: 'Trebuchet MS',Calibri,Arial;
+		font-size: 12px;
+	
+		font-weight: bold;
+	
+	}
+
+table.tablecss
+	{
+		border:solid 1px #666666;
+		background-color: #ffffff;
+		
+	}
+	
+td.footer
+	{	
+	
+		background-color: #272121;
+		color:#ffffff;
+		text-align:right;
+		font-family: Verdana;
+		font-style:italic;
+		letter-spacing: 3px;  
+	}
+
+div.loginFormUI
+	{
+		
+		width: 500px;
+		margin:50px;
+	}
+div.tabs
+	{
+		background-color: #272121;
+		color:#ffffff;
+		text-align:left;
+		font-family: Verdana;
+				
+		
+	}
+	
+a.tab:LINK{
+	color:navy;
+	font-weight: bolder;
+	
+	
+}
+
+a.tab:VISITED{
+	color:navy;
+		font-weight:bolder;
+		text-decoration: none;
+	
+	
+}
+a.tab:HOVER
+{
+	color: maroon;
+
+}
+
+a.tab:ACTIVE{
+	
+	color: maroon;
+}
+a.tabs{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.tabs:active{
+	color: yellow;
+	
+}
+
+a.tabs:LINK
+	{
+		
+		text-decoration: none;
+		
+	}	
+a.tabs:hover
+	{
+		color:#f8f400;
+		
+		text-decoration: overline;
+		
+	}	
+	
+
+a:LINK
+{
+	
+		font-weight: bold;
+		text-decoration: none;
+	    outline-color: black;
+		
+}
+
+fieldset
+	{  
+		
+			border :inherit 1px #272121;
+			
+	}	
+legend
+	{	
+
+		border :solid 0px #272121;
+		font-size: 18px;
+		vertical-align: top;
+		font-weight: bold;
+		color: navy;
+		margin-left:20px;
+		
+	}		
+input[type='text']
+      {
+      	border:solid 1px #272121;
+      	width: 150px;
+      }
+input[type='text']:FOCUS
+      {
+      	border:solid 1px #f8f400;
+      	width: 150px;
+      }
+      input[type='text']:HOVER
+      {
+      	width: 150px;
+ 			border:solid 1px #f8f400;
+      	
+      }
+      
+      
+input[type='password']
+      {
+      	border:solid 1px #272121;
+      	
+      }
+input[type='password']:FOCUS
+      {
+      	border:solid 1px #f8f400;
+      	
+      }
+input[type='submit']
+      {
+      	border:solid 2px #272121;
+      	display:block;
+      }
+input[type='submit']:HOVER
+      {
+      	border:solid 2px #0b36d5;
+      	background-color: white;
+      	word-spacing: 10px;
+      	
+      }
+input[type='reset']
+      {
+      	border:solid 2px #272121;
+      	display:block;
+      }
+input[type='reset']:HOVER
+      {
+      	border:solid 2px #0b36d5;
+      	background-color: white;
+      	word-spacing: 10px;
+      	
+      }
+      
+ ul{
+ list-style-type: none;
+ 
+ }
+ select
+ {
+ width: 150px;
+ border:solid 1px #272121;
+      	
+ }
+ select:HOVER
+ {
+ width: 150px;
+ border:solid 1px yellow;
+ 
+ }
+ 
+ span.errorMessage
+ {
+ 	color:red;
+ }
+ 

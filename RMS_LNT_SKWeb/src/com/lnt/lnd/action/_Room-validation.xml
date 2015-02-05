@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+  <field name="room_name">
+    <field-validator type="required">
+       <param name="trim">true</param>
+       <message>Room name cannot be empty</message>
+    </field-validator>
+    <field-validator type="requiredstring">
+       <param name="max">20</param>
+       <message>Room name can only be a string(maximum 20 characters)</message>
+    </field-validator>
+  </field>
+
+
+  <!-- <field name="Room_type">
+    <field-validator type="required">
+       <param name="trim">true</param>
+       <message>room type cannot be empty</message>
+    </field-validator>
+    <field-validator type="requiredstring">
+       <message>room type can only be a string.</message>
+    </field-validator>
+  </field>
+ -->
+  <!-- <field name="other_room_type">
+    <field-validator type="requiredstring">
+       <message>room type can only be a string.</message>
+    </field-validator>
+  </field> -->
+  
+  <field name="seating_capacity">
+    <field-validator type="int">
+       <message>Enter Integer Values</message>
+    </field-validator>
+  </field>
+    
+  <field name="address">
+        <field-validator type="required">
+           <param name="trim">true</param>
+           <message>Address field cannot be empty.</message>
+  </field-validator>
+        <field-validator type="requiredstring">
+           <message>Address field can only be string.</message>
+        </field-validator>
+  </field>
+    
+  <field name="remarks">
+         <field-validator type="required">
+           <message>Remark field cannot be empty.</message>
+        </field-validator>
+        <field-validator type="requiredstring">
+           <param name="trim">true</param>
+           <message>Remark field is Mandatory</message>
+        </field-validator>
+  </field> 
+ 
+  <field name="no_of_participants">
+     <field-validator type="required">
+       <message>The number of participants field cannot be empty.</message>
+     </field-validator>
+     <field-validator type="int">
+       <message>Integer value required</message>
+    </field-validator>
+  </field>
+  
+
+</validators>

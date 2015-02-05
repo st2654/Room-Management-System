@@ -1,0 +1,26 @@
+HTML {
+	HEIGHT: 100%;
+}
+BODY {
+	FONT-SIZE:medium; 
+	
+	FONT-FAMILY: monospace ; 
+	padding:0px;
+	margin:0px;
+	
+	
+
+}
+FORM
+{
+	theme:simple;
+}
+
+h2
+{
+	
+	align:center;
+	color:maroon;
+	font-family: monospace;
+	font-size: x-large;
+}
