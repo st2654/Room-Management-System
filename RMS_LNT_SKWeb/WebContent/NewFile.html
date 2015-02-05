@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Collapsible Menu | Mathachew.com</title>
+	<link href="CSS/nav_menu.css" rel="stylesheet"  media="screen" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			setTimeout(function() 
+					{
+			
+				// Grow/Shrink
+				$('#menu3 > li > a.expanded + ul').show('normal');
+				$('#menu3 > li > a').click(function() {
+					$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').toggle('normal');
+				});
+				$('#example3 .expand_all').click(function() {
+					$('#menu3 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').show('normal');
+				});
+				$('#example3 .collapse_all').click(function() {
+					$('#menu3 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').hide('normal');
+				});
+		
+			}, 250);
+		});
+	</script>
+	<style type="text/css">
+	
+	</style>
+</head>
+
+<body>
+	
+	<div id="example3">
+		<h4>Grow/Shrink <a class="expand_all"><img src="images/expand.gif" alt="" /></a> <a class="collapse_all"><img src="images/collapse.gif" alt="" /></a></h4>
+		<ul id="menu3" class="example_menu">
+			<li><a class="collapsed">Section A</a>
+		<ul>
+			<li><a href="#">Link A-A</a>
+		<ul>
+			<li><a href="#">Link A-A-A</a></li>
+			<li><a href="#">Link A-A-B</a></li>
+		</ul>
+		</li>
+			<li><a href="#">Link A-B</a></li>
+			<li><a href="#">Link A-C</a></li>
+			<li><a href="#">Link A-D</a></li>
+		</ul>
+		</li>
+			<li class="footer"><span> </span></li>
+			<li><a class="collapsed">Section B</a>
+		<ul>
+			<li><a href="#">Link B-A</a>
+		<ul>
+			<li><a href="#">Link B-A-A</a></li>
+			<li><a href="#">Link B-A-B</a></li>
+			<li><a href="#">Link B-A-C</a></li>
+		</ul>
+		</li>
+			<li><a href="#">Link B-B</a>
+		<ul>
+			<li><a href="#">Link B-B-A</a></li>
+			<li><a href="#">Link B-B-B</a></li>
+		</ul>
+		</li>
+			<li><a href="#">Link B-C</a></li>
+			<li><a href="#">Link B-D</a></li>
+		</ul>
+		</li>
+			<li class="footer"><span> </span></li>
+			<li><a class="expanded">Section C</a>
+		<ul>
+			<li><a href="#">Link C-A</a></li>
+			<li class="active"><a href="#">Link C-B</a></li>
+			<li><a href="#">Link C-C</a></li>
+			<li><a href="#">Link C-D</a></li>
+		</ul>
+		</li>
+			<li class="footer"><span> </span></li>
+		</ul>
+	</div>
+	
+</body>
+</html>

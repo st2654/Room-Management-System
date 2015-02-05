@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RMS_LNT_SKWeb">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="RMS_LNT_SKWeb"/>
+        <property name="java-output-path" value="/RMS_LNT_SKWeb/build/classes"/>
+    </wb-module>
+</project-modules>

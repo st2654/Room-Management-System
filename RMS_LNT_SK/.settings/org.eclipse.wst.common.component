@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RMS_LNT_SK">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="RMS_LNT_SKEJB.jar" deploy-path="/" handle="module:/resource/RMS_LNT_SKEJB/RMS_LNT_SKEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="RMS_LNT_SKWeb.war" deploy-path="/" handle="module:/resource/RMS_LNT_SKWeb/RMS_LNT_SKWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
