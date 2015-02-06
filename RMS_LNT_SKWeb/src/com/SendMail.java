@@ -25,7 +25,11 @@ public class SendMail extends ActionSupport
 
 	  private String SMTP_AUTH_USER = "SolutionKnights";
 
+<<<<<<< HEAD
 	  private String SMTP_AUTH_PWD  = "<PutYourPasswordHere>";
+=======
+	  private String SMTP_AUTH_PWD  = "<PutYourPassword>";
+>>>>>>> origin/master
 
 	
 	

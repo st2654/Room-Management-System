@@ -12,7 +12,11 @@ public class SMTP_Authenticator extends Authenticator
 
 	        String username = "SolutionKnights@gmail.com";
 
+<<<<<<< HEAD
 	        String password = "<PutYourPasswordHere>";
+=======
+	        String password = "<PutYourPassword>";
+>>>>>>> origin/master
 
 	        return new PasswordAuthentication(username, password);
 
